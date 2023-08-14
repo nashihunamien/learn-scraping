@@ -1,28 +1,33 @@
-# Property Scraper
+# Learn-Scrape: A Python Web Scraping Project
 
-This script scrapes property listings from `rumah.com` for properties located in Yogyakarta. The script captures details such as title, location, price, number of bedrooms and bathrooms, features, and the URL of the listing.
+`Learn-Scrape` is a Python project focused on web scraping various websites. The initial version targets `rumah.com` for property listings, but more websites will be added in the future.
 
 ## Dependencies
 
-This script uses several Python libraries:
+The project uses several Python libraries:
 
-- `cloudscraper`: To bypass Cloudflare's anti-bot measures.
-- `BeautifulSoup`: For parsing and navigating the HTML content.
+- `beautifulsoup4`: For parsing and navigating the HTML content.
 - `requests`: To make HTTP requests.
-- `csv`: To write the scraped data into a CSV file.
-- `datetime`: To generate timestamps.
+- `selenium`: For browser automation.
+- `cloudscraper`: To bypass Cloudflare's anti-bot measures.
 
 We use `poetry` to manage these dependencies.
 
 ## Setup
 
-1. Ensure you have Python installed.
-2. Install `poetry`:
+### Prerequisites
+
+- Ensure you have Python 3.11 or newer installed.
+- Install `poetry`:
    ```bash
    pip install poetry
    ```
 
-3. Navigate to the script's directory and install the dependencies using:
+### Installation
+
+1. Clone the `learn-scrape` repository to your local machine.
+2. Navigate to the project's directory.
+3. Install the dependencies using:
    ```bash
    poetry install
    ```
@@ -32,16 +37,17 @@ We use `poetry` to manage these dependencies.
 To run the script, use the following command:
 
 ```bash
-poetry run python3 rumahcom-scrape.py
+poetry run python3 main.py
 ```
 
-This will start the scraping process. The script will navigate through the paginated listings, and for each property, it will capture the required details and write them into a CSV file named `jogja_properties_<timestamp>.csv`.
+This will start the scraping process for `rumah.com`. The script will navigate through the paginated listings, capturing the required details and writing them into a CSV file.
 
-## Notes
+## Future Plans
 
-- The script includes error handling to manage connection issues and retries failed requests up to 5 times.
-- To avoid being blocked, the script waits for a random duration between 10 to 35 seconds between requests.
+- Add more websites to the scraping list.
+- Enhance error handling and optimize the scraping process.
+- Integrate with databases for structured storage of scraped data.
 
----
+## Contributing
 
-You can save the above content into a `README.md` file in the root directory of your script. Adjustments can be made as per your requirements.
+Contributions are welcome! If you have suggestions or improvements, feel free to submit a pull request or open an issue.
