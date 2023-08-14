@@ -37,7 +37,8 @@ We use `poetry` to manage these dependencies.
 To run the script, use the following command:
 
 ```bash
-poetry run python3 main.py
+poetry shell
+python3 main.py
 ```
 
 This will start the scraping process for `rumah.com`. The script will navigate through the paginated listings, capturing the required details and writing them into a CSV file.
