@@ -7,7 +7,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 
 BASE_URL = "https://www.rumah.com"
-START_URL = BASE_URL + "/properti-dijual/101?freetext=DI+Yogyakarta&maxprice=0&maxsize=0&minprice=0&minsize=0&region_code=IDYO"
+START_URL = BASE_URL + "/properti-dijual/?freetext=DI+Yogyakarta&maxprice=0&maxsize=0&minprice=0&minsize=0&region_code=IDYO"
 
 # Current date for filename and metadata
 current_date = datetime.now().strftime('%Y%m%d_%H%M%S')
