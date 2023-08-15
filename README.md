@@ -8,7 +8,6 @@ The project uses several Python libraries:
 
 - `beautifulsoup4`: For parsing and navigating the HTML content.
 - `requests`: To make HTTP requests.
-- `selenium`: For browser automation.
 - `cloudscraper`: To bypass Cloudflare's anti-bot measures.
 
 We use `poetry` to manage these dependencies.
